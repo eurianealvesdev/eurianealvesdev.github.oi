@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Descodificado</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <main class="topic">
+       <div class="topic__initial" >
+        <div>
+            <img class="logo" src="assets/img/logaAlura.svg" alt="Loga Alura">
+            <br>
+            <textarea oninput="autoajuste(this)" placeholder="Digite seu texto" class="topic__initial__texto"></textarea>
+        </div>
+        <div class="topic__initial__alerta">
+            <div class="topic__initial__alertaTexto">
+                <img src="assets/img/Ponto.svg" alt="ponto de exclamação" class="topic__initial__alertaTexto__ponto">
+                <p>Apenas letras minúsculas e sem acento.</p>
+
+            </div>
+            <div class="topic__initial__botoes">
+                <a onclick="receberCriptografar()" class="topic__initial__botoesCri">Criptografar</a>
+                <a onclick="receberDescriptografar()" class="topic__initial__botoesDes">Descriptografar</a>
+            </div>       
+        </div>
+       </div>
+       <aside class="topic__side">
+            <textarea class="topic__side__exit" id="Copy" readonly></textarea>
+            <div class="topic__side__imgText">
+                <div class="disappear">
+                    <img src="assets/img/Boneco.svg" alt="Boneco com lupa e diamante entorno." class="topic__side__boneco">
+                    <h1 class="topic__side__text__titulo">Nenhma mensagem encontrada</h1>
+                    <p class="topic__side__text__paragrafo">Digite um texto que você dejesa criptografar ou desptografar.</p>
+                </div>
+                <a class="topic__side__botaocopi" onclick="copiarText()"> Copiar</a>
+            </div>
+       </aside>
+    </main>
+    <footer >
+        <p>Desenvolvido por Euriane Alves e inpirado AntonyMerlo </p>
+        
+    </footer>
+</body>
+</html>
