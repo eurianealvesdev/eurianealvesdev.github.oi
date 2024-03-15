@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;500;700&display=swap');
+
+/* Contribution and inspiration from https://github.com/AntonyMerlo*/
+
+:root {
+    --color-primary:#0A3871;
+    --color-wouldhold:#495057;
+    --color-tertiary:#FFF;
+    --color-botao:#D8DFE8;
+    --color-bg:#F3F5FC;
+    --color-houver-botaoenc:#084F8B;
+    --color-houver-botaodes:#AACBDE;
+    
+    --fonte-primary: "Inter", sans-serif;
+}
+
+*{
+    font-family: var(--fonte-primary);
+    box-sizing: border-box;
+       
+}
+
+body{
+    background-color: var(--color-bg);
+    height: 100vh;
+   
+}
+a:hover{
+    cursor: pointer;
+}
+
+.topic{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.topic__initial{
+    display: flex;
+    width: 70%;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo{
+    margin: 2.5rem;
+}
+
+textarea{
+    resize: none;
+    border: none;
+    outline: none;
+}
+
+.topic__initial__texto,
+.topic__initial__alerta{
+    margin-left: 12rem;
+}
+ 
+.topic__initial__texto{
+    width: 60%;
+    border-radius: 0.5rem;
+}
+
+.topic__initial__texto::placeholder,.topic__initial__texto{
+    font-size: 2rem;
+    color: var(--color-primary);
+    font-weight: 400;
+    background-color: var(--color-bg);
+    max-height: 31rem;
+
+}
+
+.topic__initial__alertaTexto{
+    display: flex;
+    gap:0,5rem;
+    color: var(--color-wouldhold);
+}
+
+.topic__initial__botoes{
+    display: flex;
+    gap:2rem;
+}
+
+.topic__initial__botoesCri,
+.topic__initial__botoesDes,
+.topic__side__botaocopi{
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    width: 35%;
+    text-align: center;
+    transition: backgroud-color 0.3s; color: 0.3s;
+}
+
+.topic__initial__botoesCri{
+    color: var(--color-tertiary);
+    background-color: var(--color-primary);
+}
+
+.topic__initial__botoesDes,
+.topic__side__botaocopi{
+    color: var(--color-primary);
+    background-color: var(--color-botao);
+}
+
+.topic__initial__botoesCri:active{
+    background-color: var(--color-houver-botaoenc);
+}
+
+.topic__initial__botoesDes:active,
+.topic__side__botaocopi:active{
+    background-color: var(--color-houver-botaodes);
+}
+
+.topic__side {
+    display: flex;
+    width: 34%;
+    height: 90%;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.topic__side__exit{
+    width: 27rem;
+    height: 80%;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 1rem;
+    box-shadow: 20px 20px 60px #BEBEBE,
+                -20px -20px 60px #FFFFFF;
+}
+
+.topic__side__imgText{
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    text-align: center;
+    width: 70%;
+}
+
+.topic__side__boneco{
+    width: 100%;
+}
+
+.topic__side__text__titulo{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.topic__side__text__paragrafo{
+    color: var(--color-wouldhold);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.topic__side__botaocopi{
+    visibility: hidden;
+    width: 2.5rem;
+}
+
+footer{
+    color: var(--color-houver-botaoenc);
+    background-color: var(--color-bg);
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width:768px){
+    .topic{
+        flex-direction: column;
+        height: 95%;   
+    }
+
+    .topic__initial{
+    width: 90%;
+    }
+
+    .topic__initial__texto,
+    .topic__initial__alerta{
+        margin-left: 2rem;
+        width: 100%;
+    }
+
+    .topic__initial__texto{
+        max-height: 11rem;  
+    }
+
+    .topic__initial__botoesCri,
+    .topic__initial__botoesDes{
+        width: 50%;
+    }
+
+    .topic__side,
+    .topic__side__exit
+    {
+        width: 100%;
+    }
+
+    .topic__side__boneco{
+        display: none;
+    }
+
+    .footer{
+        position: relative;
+    }
+
+}
+
+@media(max-width:375px){
+    .topic__initial__texto,
+    .topic__initial__alerta{
+        margin: 5rem;
+    }
+    .topic__initial__texto{
+        max-height: 9.5rem;
+    }
+}
